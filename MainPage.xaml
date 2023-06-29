@@ -35,6 +35,12 @@
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />
 
+            <Button
+                x:Name="DetailsPageBtn"
+                Text="DetailsPage"
+                Clicked="OnDetailsPageClickedAsync"
+                HorizontalOptions="Center" />
+
         </VerticalStackLayout>
     </ScrollView>
 
