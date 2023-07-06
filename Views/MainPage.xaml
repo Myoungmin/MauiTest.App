@@ -3,9 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModels="clr-namespace:MauiTest.ViewModels"
              x:Class="MauiTest.MainPage">
-    <ContentPage.BindingContext>
-        <viewModels:MainPageViewModel />
-    </ContentPage.BindingContext>
     <ScrollView>
         <VerticalStackLayout
             Spacing="25"
