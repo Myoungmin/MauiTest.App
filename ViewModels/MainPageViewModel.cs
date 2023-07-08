@@ -1,8 +1,9 @@
-﻿using System.Windows.Input;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using System.Windows.Input;
 
 namespace MauiTest.ViewModels
 {
-    public class MainPageViewModel
+    public class MainPageViewModel : ObservableObject
     {
         int count = 0;
 
@@ -18,6 +19,7 @@ namespace MauiTest.ViewModels
             Navigation = navigation;
             CounterCommand = new Command(() => OnCounterClicked());
             OpenDetailedPageCommand = new Command(async () => await OnDetailsPageClickedAsync());
+            CounterBtnText = "Click!";
         }
 
         private void OnCounterClicked()
@@ -28,6 +30,8 @@ namespace MauiTest.ViewModels
                 CounterBtnText = $"Clicked {count} time";
             else
                 CounterBtnText = $"Clicked {count} times";
+
+            OnPropertyChanged(nameof(CounterBtnText));
         }
 
         private async Task OnDetailsPageClickedAsync()
