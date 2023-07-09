@@ -1,9 +1,14 @@
+using MauiTest.ViewModels;
+
 namespace MauiTest;
 
 public partial class DetailsPage : ContentPage
 {
-	public DetailsPage()
+    DetailsPageViewModel viewModel;
+    public DetailsPage()
 	{
 		InitializeComponent();
-	}
+        viewModel = new DetailsPageViewModel();
+        BindingContext = viewModel;
+    }
 }
