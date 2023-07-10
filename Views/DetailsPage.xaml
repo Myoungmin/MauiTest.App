@@ -15,7 +15,7 @@
             HeightRequest="120"
             WidthRequest="400">
             <GraphicsView.Drawable>
-                <viewModels:RectangleDrawable/>
+                <viewModels:RectangleDrawable Score="{Binding SomeScore}"/>
             </GraphicsView.Drawable>
         </GraphicsView>
     </VerticalStackLayout>
