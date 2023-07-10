@@ -4,9 +4,6 @@
              xmlns:viewModels="clr-namespace:MauiTest.ViewModels"
              x:Class="MauiTest.DetailsPage"
              Title="DetailsPage">
-    <ContentPage.Resources>
-        <viewModels:RectangleDrawable x:Key="rectangleDrawable" />
-    </ContentPage.Resources>
 
     <VerticalStackLayout>
         <Label 
@@ -15,8 +12,11 @@
             HorizontalOptions="Center" />
 
         <GraphicsView 
-            Drawable="{StaticResource RectangleDrawable}"
             HeightRequest="120"
-            WidthRequest="400" />
+            WidthRequest="400">
+            <GraphicsView.Drawable>
+                <viewModels:RectangleDrawable/>
+            </GraphicsView.Drawable>
+        </GraphicsView>
     </VerticalStackLayout>
 </ContentPage>

@@ -10,7 +10,7 @@ namespace MauiTest.ViewModels
     {
         public DetailsPageViewModel() 
         {
-            RectangleDrawable rectangleDrawable = new RectangleDrawable();
+            //RectangleDrawable rectangleDrawable = new RectangleDrawable();
         }
     }
 
