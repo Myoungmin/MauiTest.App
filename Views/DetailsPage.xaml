@@ -18,5 +18,11 @@
                 <viewModels:RectangleDrawable ColorValue="{Binding ColorProperty}"/>
             </GraphicsView.Drawable>
         </GraphicsView>
+
+        <Button
+                Text="ColorButton"
+                Command="{Binding ColorCommand}"
+                HorizontalOptions="Center" />
+        
     </VerticalStackLayout>
 </ContentPage>

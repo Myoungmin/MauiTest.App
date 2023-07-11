@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using System.Windows.Input;
 
 namespace MauiTest.ViewModels
 {
@@ -16,9 +17,17 @@ namespace MauiTest.ViewModels
             }
         }
 
-        public DetailsPageViewModel() 
-        {
+        public ICommand ColorCommand { get; }
 
+        public DetailsPageViewModel()
+        {
+            ColorCommand = new Command(() => OnColorButtonClicked());
+            ColorProperty = Colors.Black;
+        }
+
+        private void OnColorButtonClicked()
+        {
+            ColorProperty = Colors.Blue;
         }
     }
 
@@ -32,6 +41,11 @@ namespace MauiTest.ViewModels
             set => SetValue(ColorValueProperty, value);
         }
 
+        public RectangleDrawable()
+        {
+            ColorValue = Colors.Red;
+        }
+
         public void Draw(ICanvas canvas, RectF dirtyRect)
         {
             var centerPoint = new PointF(320, 100);
@@ -40,7 +54,7 @@ namespace MauiTest.ViewModels
             canvas.FillColor = Colors.Black;
             canvas.FillCircle(centerPoint, circleRadius);
 
-            canvas.StrokeColor = Colors.Red;
+            canvas.StrokeColor = ColorValue;
             canvas.StrokeSize = 4;
             canvas.DrawRectangle(10, 10, 100, 50);
         }
