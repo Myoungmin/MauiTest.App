@@ -4,11 +4,12 @@ namespace MauiTest;
 
 public partial class DetailsPage : ContentPage
 {
-    DetailsPageViewModel viewModel;
+    private DetailsPageViewModel _viewModel;
     public DetailsPage()
 	{
 		InitializeComponent();
-        viewModel = new DetailsPageViewModel();
-        BindingContext = viewModel;
+        _viewModel = new DetailsPageViewModel();
+        BindingContext = _viewModel;
+        _viewModel.GraphicsView = GraphicsViewName;
     }
 }

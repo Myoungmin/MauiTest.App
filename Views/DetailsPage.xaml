@@ -11,7 +11,8 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
-        <GraphicsView 
+        <GraphicsView
+            x:Name="GraphicsViewName"
             HeightRequest="120"
             WidthRequest="400">
             <GraphicsView.Drawable>
@@ -20,7 +21,7 @@
         </GraphicsView>
 
         <Button
-                Text="ColorButton"
+                Text="Color Button"
                 Command="{Binding ColorCommand}"
                 HorizontalOptions="Center" />
         

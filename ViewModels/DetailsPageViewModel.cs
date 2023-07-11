@@ -17,6 +17,8 @@ namespace MauiTest.ViewModels
             }
         }
 
+        public GraphicsView GraphicsView { get; set; }
+
         public ICommand ColorCommand { get; }
 
         public DetailsPageViewModel()
@@ -28,6 +30,7 @@ namespace MauiTest.ViewModels
         private void OnColorButtonClicked()
         {
             ColorProperty = Colors.Blue;
+            GraphicsView.Invalidate(); 
         }
     }
 
