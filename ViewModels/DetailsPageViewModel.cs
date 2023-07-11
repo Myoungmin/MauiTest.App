@@ -4,37 +4,37 @@ namespace MauiTest.ViewModels
 {
     internal class DetailsPageViewModel : ObservableObject
     {
-        private float _someScore;
-        public float SomeScore
+        private Color _color;
+        public Color ColorProperty
         {
-            get => _someScore;
+            get => _color;
             set
             {
-                if (_someScore == value) return;
-                _someScore = value;
+                if (_color == value) return;
+                _color = value;
                 OnPropertyChanged();
             }
         }
 
         public DetailsPageViewModel() 
         {
-            SomeScore = 100;
+
         }
     }
 
     internal class RectangleDrawable : BindableObject, IDrawable
     {
-        public static readonly BindableProperty ScoreProperty = BindableProperty.Create(nameof(Score), typeof(float), typeof(RectangleDrawable));
+        public static readonly BindableProperty ColorValueProperty = BindableProperty.Create(nameof(ColorValue), typeof(Color), typeof(RectangleDrawable));
 
-        public float Score
+        public Color ColorValue
         {
-            get => (float)GetValue(ScoreProperty);
-            set => SetValue(ScoreProperty, value);
+            get => (Color)GetValue(ColorValueProperty);
+            set => SetValue(ColorValueProperty, value);
         }
 
         public void Draw(ICanvas canvas, RectF dirtyRect)
         {
-            var centerPoint = new PointF(320, Score);
+            var centerPoint = new PointF(320, 100);
             var circleRadius = 5;
 
             canvas.FillColor = Colors.Black;
