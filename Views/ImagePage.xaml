@@ -15,5 +15,12 @@
             Source="dotnet_bot.png"
             HeightRequest="200"
             HorizontalOptions="Center" />
+
+        <Button
+                x:Name="ChangeImageBtn"
+                Text="Change Image"
+                Command="{Binding ChangeImageCommand}"
+                HorizontalOptions="Center" />
+        
     </VerticalStackLayout>
 </ContentPage>
