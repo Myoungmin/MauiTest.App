@@ -4,12 +4,13 @@ namespace MauiTest;
 
 public partial class MainPage : ContentPage
 {
-	MainPageViewModel viewModel;
+	MainPageViewModel _viewModel;
 	public MainPage()
 	{
 		InitializeComponent();
-		viewModel = new MainPageViewModel(Navigation);
-		BindingContext= viewModel;
+		_viewModel = new MainPageViewModel(Navigation);
+		BindingContext= _viewModel;
+
 	}	
 }
 

@@ -12,5 +12,6 @@ public partial class ImagePage : ContentPage
 
         _viewModel = new ImagePageViewModel();
         BindingContext = _viewModel;
+        _viewModel.Image = ImageXName;
     }
 }

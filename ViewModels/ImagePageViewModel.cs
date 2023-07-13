@@ -5,6 +5,6 @@ namespace MauiTest.ViewModels
 {
     public class ImagePageViewModel : ObservableObject
     {
-
+        public Image Image { get; set; }
     }
 }
