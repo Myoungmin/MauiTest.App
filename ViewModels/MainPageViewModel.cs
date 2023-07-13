@@ -13,12 +13,14 @@ namespace MauiTest.ViewModels
 
         public ICommand CounterCommand { get; }
         public ICommand OpenDetailedPageCommand { get; }
+        public ICommand OpenImagePageCommand { get; }
 
         public MainPageViewModel(INavigation navigation)
         {
             Navigation = navigation;
             CounterCommand = new Command(() => OnCounterClicked());
             OpenDetailedPageCommand = new Command(async () => await OnDetailsPageClickedAsync());
+            OpenImagePageCommand = new Command(async () => await OnImagePageClickedAsync());
             CounterBtnText = "Click!";
         }
 
@@ -37,6 +39,11 @@ namespace MauiTest.ViewModels
         private async Task OnDetailsPageClickedAsync()
         {
             await Navigation.PushAsync(new DetailsPage());
+        }
+
+        private async Task OnImagePageClickedAsync()
+        {
+            await Navigation.PushAsync(new ImagePage());
         }
     }
 }

@@ -40,6 +40,12 @@
                 Command="{Binding OpenDetailedPageCommand}"
                 HorizontalOptions="Center" />
 
+            <Button
+                x:Name="ImagePageBtn"
+                Text="ImagePage"
+                Command="{Binding OpenImagePageCommand}"
+                HorizontalOptions="Center" />
+
         </VerticalStackLayout>
     </ScrollView>
 

@@ -17,7 +17,7 @@
             HeightRequest="120"
             WidthRequest="400">
             <GraphicsView.Drawable>
-                <viewModels:RectangleDrawable ColorValue="{Binding Source={ x:Reference Root }, Path=ColorProperty}"/>
+                <viewModels:RectangleDrawable ColorValue="{Binding ColorProperty}"/>
             </GraphicsView.Drawable>
         </GraphicsView>
 
